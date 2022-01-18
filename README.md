@@ -12,7 +12,8 @@
 ***
 ### Проект доступен по ссылке:
 
-ssh diplom@51.250.1.23
+http://51.250.1.23
+#### (ssh diplom@51.250.1.23) вход через терминал
 
 
 ### Стек технологий
@@ -50,8 +51,6 @@ docker-compose exec web python manage.py migrate
 docker-compose exec web python manage.py collectstatic --noinput
 6. Создание суперпользователя Django
 docker-compose exec web python manage.py createsuperuser
-
-Документация доступна по адресу:
 
 
 Автор проекта: Ткач Олег
