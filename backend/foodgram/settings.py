@@ -5,7 +5,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get(
     'SECRET_KEY', default='l9qay8n6yva6jatw0c7b0fmthg8bbp3czfxzj71uklqe9xniz2')
 
-DEBUG = False  # os.environ.get('DEBUG', default=False)
+DEBUG = True  # os.environ.get('DEBUG', default=False)
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', default=['*'])
 

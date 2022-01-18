@@ -64,7 +64,8 @@ class RecipeViewSet(ModelViewSet):
         model_obj.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-    @action(detail=True, permission_classes=[IsAuthenticated])
+    @action(detail=True, methods=["POST"],
+            permission_classes=[IsAuthenticated])
     def favorite(self, request, pk):
         return self.post_method_for_actions(
             request=request, pk=pk, serializers=FavoriteSerializer)
@@ -74,7 +75,8 @@ class RecipeViewSet(ModelViewSet):
         return self.delete_method_for_actions(
             request=request, pk=pk, model=Favorite)
 
-    @action(detail=True, permission_classes=[IsAuthenticated])
+    @action(detail=True, methods=["POST"],
+            permission_classes=[IsAuthenticated])
     def shopping_cart(self, request, pk):
         return self.post_method_for_actions(
             request=request, pk=pk, serializers=ShoppingCartSerializer)
