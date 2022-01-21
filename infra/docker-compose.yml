@@ -7,7 +7,7 @@ services:
     env_file:
       - ./.env
   backend:
-    image: olegvpc/foodgram_backend:latest
+    image: olegvpc/foodgram_backend
 #    build: # локальный запуск
 #      context: ../backend
 #      dockerfile: Dockerfile
@@ -21,7 +21,7 @@ services:
       - ./.env
 
   frontend:
-    image: olegvpc/foodgram_frontend:latest
+    image: olegvpc/foodgram_frontend
 #    build: # локальный запуск
 #      context: ../frontend
 #      dockerfile: Dockerfile

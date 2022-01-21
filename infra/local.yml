@@ -20,9 +20,9 @@ services:
       - ./.env
 
   frontend:
-    build: # если надо собрать в локале
-      context: ../frontend
-      dockerfile: Dockerfile
+#    build: # если надо собрать в локале
+#      context: ../frontend
+#      dockerfile: Dockerfile
     image: olegvpc/foodgram_frontend
     volumes:
       - ../frontend/:/app/result_build/
