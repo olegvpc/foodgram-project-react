@@ -43,14 +43,23 @@ DB_PORT=5432
 SECRET_KEY=SECRET_KEY - секретный ключ шифрования Django
 ```
 3. Сборка и запуск контейнера
-docker-compose up -d --build
+```docker-compose up -d --build```
 4. Миграции
-docker-compose exec web python manage.py makemigrations
-docker-compose exec web python manage.py migrate
+
+```docker-compose exec backup python manage.py makemigrations```
+
+```docker-compose exec backup python manage.py migrate```
 5. Сбор статики
-docker-compose exec web python manage.py collectstatic --noinput
+
+```docker-compose exec backup python manage.py collectstatic --no input```
 6. Создание суперпользователя Django
-docker-compose exec web python manage.py createsuperuser
 
+```docker-compose exec backup python manage.py createsuperuser```
+7. Копирование данных с ингридиентами из файла
 
+```docker-compose exec backup pythonpython manage.py add_ingredients```
+
+8. Копирование данных с тэгами из файла
+
+```docker-compose exec backup pythonpython manage.py add_tag```
 Автор проекта: Ткач Олег
