@@ -12,8 +12,8 @@
 ***
 ### Проект доступен по ссылке:
 
-http://51.250.1.23
-#### (ssh diplom@51.250.1.23) вход через терминал
+http://62.84.112.83
+#### ssh diplom@62.84.112.83 вход через терминал
 
 
 ### Стек технологий
@@ -46,20 +46,21 @@ SECRET_KEY=SECRET_KEY - секретный ключ шифрования Django
 ```docker-compose up -d --build```
 4. Миграции
 
-```docker-compose exec backup python manage.py makemigrations```
+```docker-compose exec backend python manage.py makemigrations```
 
-```docker-compose exec backup python manage.py migrate```
+```docker-compose exec backend python manage.py migrate```
 5. Сбор статики
 
-```docker-compose exec backup python manage.py collectstatic --no input```
+```docker-compose exec backend python manage.py collectstatic --no input```
 6. Создание суперпользователя Django
 
-```docker-compose exec backup python manage.py createsuperuser```
+```docker-compose exec backend python manage.py createsuperuser```
 7. Копирование данных с ингридиентами из файла
 
-```docker-compose exec backup pythonpython manage.py add_ingredients```
+```docker-compose exec backend python manage.py add_ingredients```
 
 8. Копирование данных с тэгами из файла
 
-```docker-compose exec backup pythonpython manage.py add_tag```
+```docker-compose exec backend python manage.py add_tag```
+
 Автор проекта: Ткач Олег

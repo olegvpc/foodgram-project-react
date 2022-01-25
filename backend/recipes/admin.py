@@ -29,11 +29,12 @@ class RecipeAdmin(admin.ModelAdmin):
 
     @staticmethod
     def amount_tags(obj):
-        return "\n".join([a.name for a in obj.tags.all()])
+        print(f"печать объекта obj {obj}")
+        return "\n".join([i[0] for i in obj.tags.values_list('name')])
 
     @staticmethod
     def amount_ingredients(obj):
-        return "\n".join([a.name for a in obj.ingredients.all()])
+        return "\n".join([i[0] for i in obj.ingredients.values_list('name')])
 
 
 @admin.register(IngredientAmount)
