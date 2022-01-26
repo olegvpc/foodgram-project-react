@@ -29,7 +29,6 @@ class RecipeAdmin(admin.ModelAdmin):
 
     @staticmethod
     def amount_tags(obj):
-        print(f"печать объекта obj {obj}")
         return "\n".join([i[0] for i in obj.tags.values_list('name')])
 
     @staticmethod
