@@ -163,7 +163,7 @@ class FavoriteSerializer(serializers.ModelSerializer):
         fields = ('user', 'recipe')
 
     def validate(self, data):
-        request = data['request']
+        request = self.context.get('request')
         if not request or request.user.is_anonymous:
             return False
         recipe = data['recipe']
